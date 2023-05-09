@@ -1,0 +1,25 @@
+// Custom Variable
+
+$body-color: #444444;
+$headings-font-family: "Dosis", sans-serif;
+$headings-color: #0f394c;
+$headings-font-weight: 700;
+$font-family-base: "Open Sans", sans-serif;
+
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@700&family=Open+Sans&family=Poppins:wght@400;500;600;700;800&display=swap");
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+
+$custom-theme-colors: (
+  "myMain-color": #49b5e7,
+  "mySec-color": #f4fbfe,
+  "sevIcon-1": #ff689b,
+  "sevIcon-2": #e9bf06,
+  "sevIcon-3": #3fcdc7,
+  "sevIcon-4": #e0ff56,
+  "sevIcon-5": #41cf2e,
+);
+
+$theme-colors: map-merge($custom-theme-colors, $theme-colors);
+// Import bootstraps
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
