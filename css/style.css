@@ -33,6 +33,7 @@
 .clients .client-logo img {
   height: 50%;
   filter: grayscale(100%);
+  transition: 0.3s;
 }
 .clients .client-logo {
   height: 120px;
@@ -80,6 +81,167 @@
 .review h3 {
   font-size: 45px;
 }
+
+.service-card {
+  overflow: hidden;
+}
+
+.icon-wrapper {
+  left: -20px;
+}
+
+.text-wrapper {
+  margin-left: 40px;
+}
+
+.clients .client-logo img:hover {
+  filter: grayscale(0%);
+  transform: scale(1.3);
+}
+
+.portfolio-wrap {
+  overflow: hidden;
+  z-index: 1;
+  z-index: 1;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.portfolio-wrap .portfolio-info {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all ease-in-out 0.3s;
+  opacity: 0;
+}
+
+.portfolio-wrap::before {
+  content: "";
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  bottom: 30px;
+  right: 30px;
+  transition: all ease-in-out 0.3s;
+  z-index: 5;
+  opacity: 0;
+}
+
+.portfolio-wrap .portfolio-info::before {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  top: 35px;
+  left: 35px;
+  border-top: 3px solid #60676a;
+  border-left: 3px solid #60676a;
+  position: absolute;
+  z-index: 200;
+}
+
+.portfolio-wrap .portfolio-info::after {
+  display: block;
+  content: "";
+  width: 48px;
+  height: 48px;
+  bottom: 35px;
+  right: 35px;
+  border-bottom: 3px solid #60676a;
+  border-right: 3px solid #60676a;
+  position: absolute;
+  z-index: 200;
+}
+
+.portfolio-wrap:hover .portfolio-info {
+  opacity: 1;
+}
+
+.portfolio-wrap:hover::before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+}
+
+.gallery-box {
+  overflow: hidden;
+  transition: all ease-in-out 0.4s;
+}
+
+.gallery-box:hover img {
+  transition: all ease-in-out 0.4s;
+}
+
+.gallery-box:hover img {
+  transform: scale(1.1);
+}
+
+.navbar-nav .nav-link.active {
+  color: blue !important;
+  font-weight: 900;
+}
+
+.social-wrap {
+  /* display: none; */
+  opacity: 0;
+  transition: 0.4s;
+}
+.team-card {
+  transition: all ease-in-out 0.4s;
+}
+.team-card:hover .social-wrap {
+  /* display: block; */
+  opacity: 1;
+  transition: ease-in-out 0.4s;
+}
+
+.social-links {
+  /* background: coral; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  transition: all ease-in-out 0.4s;
+}
+
+.team-card:hover .social-box{
+  transform: translateY(-30px);
+  transition: all ease-in-out 0.4s;
+
+}
+
+.social-box {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links ul {
+  margin-left: 0;
+  padding-left: 0;
+  transition: ease-in-out 0.3s;
+}
+
+.social-links ul li {
+  list-style: none;
+}
+
 @media (max-width: 769px) {
   .login-container {
     width: 60%;
